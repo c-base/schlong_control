@@ -37,7 +37,7 @@ encoding utf-8
 Sheet 1 1
 Title "Schlong Module Circuit"
 Date "2017-03-16"
-Rev "1"
+Rev "2"
 Comp "coon@c-base.org"
 Comment1 ""
 Comment2 ""
