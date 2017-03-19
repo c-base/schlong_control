@@ -1,4 +1,4 @@
-update=17/03/2017 02:49:11
+update=2017-03-17T21:11:18 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,4 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=D:/c-base/schlong_control/lib/bt138
+LibName30=/home/coon/schlong_control/lib/bt138
