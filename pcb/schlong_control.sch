@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:schlong_control-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,6 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:bt138
+LIBS:7805_(enumerated_pins)
 LIBS:schlong_control-cache
 EELAYER 25 0
 EELAYER END
@@ -36,8 +37,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Schlong Module Circuit"
-Date "2017-09-01"
-Rev "4"
+Date "2017-09-02"
+Rev "5"
 Comp "coon@c-base.org"
 Comment1 ""
 Comment2 ""
@@ -61,7 +62,7 @@ U 1 1 58A8CC94
 P 6800 950
 F 0 "EL-Wire_1" V 6950 750 50  0000 L CNN
 F 1 "C" V 6850 800 50  0001 L CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 6838 800 50  0001 C CNN
+F 2 "Connectors:PINHEAD1-2" H 6838 800 50  0001 C CNN
 F 3 "" H 6800 950 50  0000 C CNN
 	1    6800 950 
 	0    -1   -1   0   
@@ -109,7 +110,7 @@ U 1 1 58A941B5
 P 6800 1950
 F 0 "EL-Wire_2" V 6950 1750 50  0000 L CNN
 F 1 "C" V 6850 1800 50  0001 L CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 6838 1800 50  0001 C CNN
+F 2 "Connectors:PINHEAD1-2" H 6838 1800 50  0001 C CNN
 F 3 "" H 6800 1950 50  0000 C CNN
 	1    6800 1950
 	0    -1   -1   0   
@@ -146,7 +147,7 @@ U 1 1 58A94282
 P 6800 2900
 F 0 "EL-Wire_3" V 6950 2700 50  0000 L CNN
 F 1 "C" V 6850 2750 50  0001 L CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 6838 2750 50  0001 C CNN
+F 2 "Connectors:PINHEAD1-2" H 6838 2750 50  0001 C CNN
 F 3 "" H 6800 2900 50  0000 C CNN
 	1    6800 2900
 	0    -1   -1   0   
@@ -183,7 +184,7 @@ U 1 1 58A9435F
 P 6800 3800
 F 0 "EL-Wire_4" V 6950 3600 50  0000 L CNN
 F 1 "C" V 6850 3650 50  0001 L CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 6838 3650 50  0001 C CNN
+F 2 "Connectors:PINHEAD1-2" H 6838 3650 50  0001 C CNN
 F 3 "" H 6800 3800 50  0000 C CNN
 	1    6800 3800
 	0    -1   -1   0   
@@ -220,7 +221,7 @@ U 1 1 58A94822
 P 6800 4650
 F 0 "EL-Wire_5" V 6950 4450 50  0000 L CNN
 F 1 "C" V 6850 4500 50  0001 L CNN
-F 2 "Connectors_Terminal_Blocks:TerminalBlock_Pheonix_MKDS1.5-2pol" H 6838 4500 50  0001 C CNN
+F 2 "Connectors:PINHEAD1-2" H 6838 4500 50  0001 C CNN
 F 3 "" H 6800 4650 50  0000 C CNN
 	1    6800 4650
 	0    -1   -1   0   
@@ -314,7 +315,7 @@ U 1 1 58B4C29D
 P 5350 1250
 F 0 "U2" H 5150 1450 50  0000 L CNN
 F 1 "MOC3063M" H 5350 1450 50  0000 L CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 1050 50  0000 L CIN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 1050 50  0001 L CIN
 F 3 "" H 5340 1250 50  0000 L CNN
 	1    5350 1250
 	1    0    0    -1  
@@ -325,7 +326,7 @@ U 1 1 58B4C496
 P 5350 2250
 F 0 "U3" H 5150 2450 50  0000 L CNN
 F 1 "MOC3063M" H 5350 2450 50  0000 L CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 2050 50  0000 L CIN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 2050 50  0001 L CIN
 F 3 "" H 5340 2250 50  0000 L CNN
 	1    5350 2250
 	1    0    0    -1  
@@ -336,7 +337,7 @@ U 1 1 58B4C537
 P 5350 3200
 F 0 "U4" H 5150 3400 50  0000 L CNN
 F 1 "MOC3063M" H 5350 3400 50  0000 L CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 3000 50  0000 L CIN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 3000 50  0001 L CIN
 F 3 "" H 5340 3200 50  0000 L CNN
 	1    5350 3200
 	1    0    0    -1  
@@ -347,7 +348,7 @@ U 1 1 58B4C59C
 P 5350 4100
 F 0 "U5" H 5150 4300 50  0000 L CNN
 F 1 "MOC3063M" H 5350 4300 50  0000 L CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 3900 50  0000 L CIN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 3900 50  0001 L CIN
 F 3 "" H 5340 4100 50  0000 L CNN
 	1    5350 4100
 	1    0    0    -1  
@@ -358,7 +359,7 @@ U 1 1 58B4C5FD
 P 5350 4950
 F 0 "U6" H 5150 5150 50  0000 L CNN
 F 1 "MOC3063M" H 5350 5150 50  0000 L CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 4750 50  0000 L CIN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 5150 4750 50  0001 L CIN
 F 3 "" H 5340 4950 50  0000 L CNN
 	1    5350 4950
 	1    0    0    -1  
