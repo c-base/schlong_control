@@ -1,7 +1,7 @@
 /* Schlong control
  * 
  * Author: coon
- * Last maintained: 03. April 2017
+ * Last maintained: 06. April 2017
  */
 
 #include <SPI.h>
@@ -16,16 +16,22 @@ void setup() {
 
 void loop() {
   for(int i = 0; i < 5; ++i) {
-    digitalPotWrite(1 << i);
-    Serial.println(1 << i);
-
+    setElWire(1 << i);
+    
     delay(75);
   }
 }
 
-void digitalPotWrite(int value) {
+void setElWire(int value) {
   digitalWrite(slaveSelectPin, LOW);
   delay(10);
+  SPI.transfer(value);
+  SPI.transfer(value);
+  SPI.transfer(value);
+  SPI.transfer(value);
+  SPI.transfer(value);
+  SPI.transfer(value);
+  SPI.transfer(value);
   SPI.transfer(value);
   delay(10);
   digitalWrite(slaveSelectPin, HIGH);
