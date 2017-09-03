@@ -3,10 +3,10 @@
   (general
     (links 85)
     (no_connects 0)
-    (area 50.724999 25.324999 139.775001 120.725001)
+    (area 50.724999 25.324999 139.775001 105.485001)
     (thickness 1.6)
     (drawings 28)
-    (tracks 295)
+    (tracks 297)
     (zones 0)
     (modules 38)
     (nets 35)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.25)
     (user_trace_width 0.5)
     (user_trace_width 0.75)
     (user_trace_width 1)
@@ -1855,6 +1855,12 @@
     )
   )
 
+  (gr_line (start 50.8 105.41) (end 50.8 25.4) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 139.7 25.4) (end 139.7 105.41) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 50.8 105.41) (end 139.7 105.41) (layer Edge.Cuts) (width 0.15))
+  (gr_text "coon@c-base.org\n03.09.2017" (at 128.27 100.33) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (dimension 95.25 (width 0.3) (layer Eco1.User)
     (gr_text "95,250 mm" (at 147.4 73.025 270) (layer Eco1.User)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
@@ -1880,8 +1886,6 @@
     (arrow2b (pts (xy 50.8 127) (xy 51.926504 126.413579)))
   )
   (gr_line (start 139.7 25.4) (end 121.92 25.4) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 139.7 120.65) (end 139.7 25.4) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 121.92 120.65) (end 139.7 120.65) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 115.57 63.5) (end 115.57 62.23) (angle 180) (layer Edge.Cuts) (width 0.15) (tstamp 59AB23A6))
   (gr_line (start 107.95 64.77) (end 115.57 64.77) (layer Edge.Cuts) (width 0.15) (tstamp 59AB23A5))
   (gr_arc (start 107.95 63.5) (end 107.95 64.77) (angle 180) (layer Edge.Cuts) (width 0.15) (tstamp 59AB23A4))
@@ -1902,10 +1906,10 @@
   (gr_arc (start 64.77 63.5) (end 64.77 62.23) (angle 180) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 57.15 64.77) (end 64.77 64.77) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 57.15 62.23) (end 64.77 62.23) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 50.8 25.4) (end 50.8 120.65) (angle 90) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 50.8 120.65) (end 121.92 120.65) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 121.92 25.4) (end 50.8 25.4) (angle 90) (layer Edge.Cuts) (width 0.15))
 
+  (segment (start 139.7 25.4) (end 139.7 105.41) (width 0.25) (layer Dwgs.User) (net 0))
+  (segment (start 50.8 106.68) (end 139.7 106.68) (width 0.25) (layer Dwgs.User) (net 0))
   (segment (start 75.97 99.06) (end 75.97 96.75) (width 0.25) (layer B.Cu) (net 1))
   (segment (start 96.52 81.28) (end 98.425 83.185) (width 0.25) (layer B.Cu) (net 1))
   (segment (start 98.425 89.535) (end 95.25 92.71) (width 0.25) (layer B.Cu) (net 1))
@@ -2208,12 +2212,12 @@
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
     (polygon
       (pts
-        (xy 49.53 65.405) (xy 140.97 65.405) (xy 140.97 121.285) (xy 48.895 121.285) (xy 48.895 65.405)
+        (xy 48.895 65.405) (xy 140.97 65.405) (xy 140.97 106.68) (xy 49.53 106.68) (xy 48.895 106.68)
       )
     )
     (filled_polygon
       (pts
-        (xy 138.99 119.94) (xy 51.51 119.94) (xy 51.51 98.46) (xy 74.72256 98.46) (xy 74.72256 99.66)
+        (xy 138.99 104.7) (xy 51.51 104.7) (xy 51.51 98.46) (xy 74.72256 98.46) (xy 74.72256 99.66)
         (xy 74.766838 99.895317) (xy 74.90591 100.111441) (xy 75.11811 100.256431) (xy 75.37 100.30744) (xy 76.57 100.30744)
         (xy 76.805317 100.263162) (xy 76.932636 100.181234) (xy 77.301036 100.307807) (xy 77.791413 100.277482) (xy 78.103617 100.148164)
         (xy 78.15313 99.922735) (xy 77.47 99.239605) (xy 77.455858 99.253748) (xy 77.276253 99.074143) (xy 77.290395 99.06)
