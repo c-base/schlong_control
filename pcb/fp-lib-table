@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name idc)(type KiCad)(uri /home/coon/c-base/space_schlong/lib/idc.pretty)(options "")(descr ""))
+)

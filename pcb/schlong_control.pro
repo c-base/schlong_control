@@ -1,4 +1,4 @@
-update=03/09/2017 01:14:27
+update=Tue 13 Mar 2018 10:15:20 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -56,7 +56,7 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/c-lab/Desktop/schlong_control/lib/bt138
-LibName31=C:/Users/c-lab/Desktop/schlong_control/lib/7805_(enumerated_pins)
+LibName30=/home/coon/c-base/space_schlong/lib/7805_(enumerated_pins)
+LibName31=/home/coon/c-base/space_schlong/lib/bt138
 [general]
 version=1
