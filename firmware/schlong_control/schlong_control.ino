@@ -1,17 +1,20 @@
 /* Schlong control
  * 
  * Author: coon
- * Last maintained: 06. April 2017
+ * Last maintained: 19. May 2018
  */
 
 #include <SPI.h>
 
-const int slaveSelectPin = 3;
+const int _pSchlongSelect[8] = {PE_0, PE_1, PE_2, PE_3, PC_4, PC_5, PC_6, PC_7};
 
 void setup() {
-  pinMode(slaveSelectPin, OUTPUT);
+  for(int i = 0; i < 8; ++i)
+    pinMode(_pSchlongSelect[i], OUTPUT);
+    
   Serial.begin(115200);
   SPI.begin();
+  SPI.setClockDivider(SPI_CLOCK_DIV128);
 }
 
 void loop() {
@@ -22,17 +25,17 @@ void loop() {
   }
 }
 
-void setElWire(int value) {
-  digitalWrite(slaveSelectPin, LOW);
+void setElWire(int value) { 
+  for(int i = 0; i < 8; ++i)
+    digitalWrite(_pSchlongSelect[i], LOW);
+
   delay(10);
+  
   SPI.transfer(value);
-  SPI.transfer(value);
-  SPI.transfer(value);
-  SPI.transfer(value);
-  SPI.transfer(value);
-  SPI.transfer(value);
-  SPI.transfer(value);
-  SPI.transfer(value);
+  
   delay(10);
-  digitalWrite(slaveSelectPin, HIGH);
+
+  for(int i = 0; i < 8; ++i)
+    digitalWrite(_pSchlongSelect[i], HIGH);  
 }
+
